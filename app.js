@@ -19,6 +19,7 @@ app.post('/student.add', jsonParser, async (req, res) => {
     port: 5432,
   })
   client.connect();
+  
   //TODO: Need to check the cases for unvalid inputs
   let dbResponse = {};
   const {name, token} = req.body;
